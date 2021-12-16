@@ -1,0 +1,26 @@
+{
+  "id": "68e9f773-fda8-4758-a6cb-2974a152d578",
+  "name": "PBY Plastic BC18",
+  "publisher": "CBR Technology",
+  "version": "18.0.0.23",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "18.0.0.0",
+  "idRanges": [
+    {
+      "from": 50000,
+      "to": 99999
+    }
+  ],
+  "contextSensitiveHelpUrl": "https://PBYPlasticBC18.com/help/",
+  "showMyCode": true,
+  "runtime": "7.0"
+}
