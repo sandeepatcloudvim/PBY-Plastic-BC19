@@ -125,6 +125,16 @@ page 50000 "Assembly Variance"
                     DecimalPlaces = 0 : 2;
                     Caption = 'COST VARIANCE %';
                 }
+                field(Profit; Profit)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Profit';
+                }
+                field(ProfitMargin; ProfitMargin)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Profit Margin';
+                }
 
 
             }
@@ -146,10 +156,13 @@ page 50000 "Assembly Variance"
         CostAmountActual: Decimal;
         OriginalQty: Decimal;
         Qty1: Decimal;
+        Profit: Decimal;
+        ProfitMargin: Decimal;
         recSalesHeader: Record "Sales Header";
         CustomerNo: Code[20];
         CustomerName: Text[100];
         SalesHeaderArchive: Record "Sales Header Archive";
+        recPostedSalesInvLine: Record "Sales Invoice Line";
 
 
     trigger OnAfterGetRecord()
@@ -177,10 +190,22 @@ page 50000 "Assembly Variance"
                 CustomerName := SalesHeaderArchive."Sell-to Customer Name";
             end;
 
-
             if recSalesHeader.Get(recSalesHeader."Document Type"::Order, PostedAssemblyOrder."Sales Order No.") then;
 
-            //OriginalQty := GetOriginallyQty(PostedAssemblyOrder."Order No.");  //AGT_SV
+
+            clear(Profit);
+            Clear(ProfitMargin);
+            recPostedSalesInvLine.Reset();
+            recPostedSalesInvLine.SetRange("Order No.", PostedAssemblyOrder."Sales Order No.");
+            recPostedSalesInvLine.SetRange("No.", PostedAssemblyOrder."Item No.");
+            if recPostedSalesInvLine.FindFirst() then begin
+                if recPostedSalesInvLine."Unit Price" > 0 then begin
+                    Profit := recPostedSalesInvLine."Unit Price" - PostedAssemblyOrder."Unit Cost";
+                    ProfitMargin := Profit / recPostedSalesInvLine."Unit Price";
+                end;
+            end;
+
+
 
             if recItem.Get(PostedAssemblyOrder."Item No.") then begin
                 recItem.CalcFields("Assembly BOM");

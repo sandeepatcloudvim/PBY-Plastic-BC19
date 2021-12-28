@@ -11,7 +11,7 @@ pageextension 50004 CBR_ExtendPostedAssemblyOrders extends "Posted Assembly Orde
         {
             action("Assembly Variance")
             {
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = all;
                 Caption = 'Assembly Variance';
                 RunObject = page "Assembly Variance";
                 Promoted = true;
