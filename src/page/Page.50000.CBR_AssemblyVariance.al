@@ -3,8 +3,7 @@ page 50000 "Assembly Variance"
     PageType = List;
     Caption = 'Assembly Variance';
     SourceTable = "Item Ledger Entry";
-    SourceTableView = SORTING("Entry No.")
-                      ORDER(descending)
+    SourceTableView = ORDER(descending)
                       WHERE("Entry Type" = FILTER("Assembly Consumption"));
     ApplicationArea = Basic, Suite;
     DataCaptionFields = "Item No.";
@@ -125,6 +124,11 @@ page 50000 "Assembly Variance"
                     DecimalPlaces = 0 : 2;
                     Caption = 'COST VARIANCE %';
                 }
+                field(TotalRevenue; TotalRevenue)
+                {
+                    ApplicationArea = All;
+                    Caption = 'Revenue';
+                }
                 field(Profit; Profit)
                 {
                     ApplicationArea = All;
@@ -133,7 +137,7 @@ page 50000 "Assembly Variance"
                 field(ProfitMargin; ProfitMargin)
                 {
                     ApplicationArea = All;
-                    Caption = 'Profit Margin';
+                    Caption = 'Profit Margin %';
                 }
 
 
@@ -148,6 +152,7 @@ page 50000 "Assembly Variance"
         PostedAssemblyOrder: Record "Posted Assembly Header";
         recItem: Record Item;
         ValueEntry: Record "Value Entry";
+        ValueEntry1: Record "Value Entry";
         BOMComponent: Record "BOM Component";
         RawQtyPlanned: Decimal;
         RawCostPlanned: Decimal;
@@ -163,10 +168,18 @@ page 50000 "Assembly Variance"
         CustomerName: Text[100];
         SalesHeaderArchive: Record "Sales Header Archive";
         recPostedSalesInvLine: Record "Sales Invoice Line";
+        TotalCost: Decimal;
+        XDocNo: Code[20];
+        TotalRevenue: Decimal;
 
+    trigger OnOpenPage()
+    begin
+        Rec.SetCurrentKey("Document No.");
+    end;
 
     trigger OnAfterGetRecord()
     begin
+
         Rec.CalcFields("Cost Amount (Actual)");
         Clear(CostAmountActual);
         ValueEntry.Reset();
@@ -175,6 +188,14 @@ page 50000 "Assembly Variance"
         if ValueEntry.FindFirst() then begin
             CostAmountActual := Abs(ValueEntry."Cost Amount (Actual)");
         end;
+
+        Clear(TotalCost);
+        ValueEntry1.Reset();
+        ValueEntry1.SetFilter("Item Ledger Entry Type", '%1', ValueEntry1."Item Ledger Entry Type"::"Assembly Consumption");
+        ValueEntry1.SetFilter(Adjustment, '%1', false);
+        ValueEntry1.SetRange("Document No.", Rec."Document No.");
+        ValueEntry1.CalcSums("Cost Amount (Actual)");
+        TotalCost := Abs(ValueEntry1."Cost Amount (Actual)");
 
         if PostedAssemblyOrder.Get(Rec."Document No.") then begin
             PostedAssemblyOrder.CalcFields("Sales Order No.");
@@ -193,18 +214,22 @@ page 50000 "Assembly Variance"
             if recSalesHeader.Get(recSalesHeader."Document Type"::Order, PostedAssemblyOrder."Sales Order No.") then;
 
 
-            clear(Profit);
+            Clear(Profit);
             Clear(ProfitMargin);
-            recPostedSalesInvLine.Reset();
-            recPostedSalesInvLine.SetRange("Order No.", PostedAssemblyOrder."Sales Order No.");
-            recPostedSalesInvLine.SetRange("No.", PostedAssemblyOrder."Item No.");
-            if recPostedSalesInvLine.FindFirst() then begin
-                if recPostedSalesInvLine."Unit Price" > 0 then begin
-                    Profit := recPostedSalesInvLine."Unit Price" - PostedAssemblyOrder."Unit Cost";
-                    ProfitMargin := Profit / recPostedSalesInvLine."Unit Price";
+            Clear(TotalRevenue);
+            if Rec."Document No." <> XDocNo then begin
+                recPostedSalesInvLine.Reset();
+                recPostedSalesInvLine.SetRange("Order No.", PostedAssemblyOrder."Sales Order No.");
+                recPostedSalesInvLine.SetRange("No.", PostedAssemblyOrder."Item No.");
+                if recPostedSalesInvLine.FindFirst() then begin
+                    if TotalCost > 0 then begin
+                        Profit := recPostedSalesInvLine."Line Amount" - TotalCost;
+                        ProfitMargin := (Profit / recPostedSalesInvLine."Line Amount") * 100;
+                        TotalRevenue := recPostedSalesInvLine."Line Amount";
+                    end;
                 end;
+                XDocNo := Rec."Document No."
             end;
-
 
 
             if recItem.Get(PostedAssemblyOrder."Item No.") then begin
@@ -236,6 +261,10 @@ page 50000 "Assembly Variance"
                     end;
                 end;
             end;
+
+
+
+
         end;
     end;
 
