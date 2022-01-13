@@ -224,7 +224,8 @@ page 50000 "Assembly Variance"
                 if recPostedSalesInvLine.FindFirst() then begin
                     if TotalCost > 0 then begin
                         Profit := recPostedSalesInvLine."Line Amount" - TotalCost;
-                        ProfitMargin := (Profit / recPostedSalesInvLine."Line Amount") * 100;
+                        if recPostedSalesInvLine."Line Amount" > 0 then
+                            ProfitMargin := (Profit / recPostedSalesInvLine."Line Amount") * 100;
                         TotalRevenue := recPostedSalesInvLine."Line Amount";
                     end;
                 end;
