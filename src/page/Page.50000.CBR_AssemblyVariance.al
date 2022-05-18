@@ -277,25 +277,6 @@ page 50000 "Assembly Variance"
             exit(Itemrec."Unit Cost");
     end;
 
-    local procedure GetOriginallyQty(OrderNo: Code[20]): Decimal
-    var
-        recAssemblyOrder: Record "Assembly Header";
-        recPostedAssembly: Record "Posted Assembly Header";
-    begin
-        if recAssemblyOrder.Get(recAssemblyOrder."Document Type"::Order, OrderNo) then
-            Qty1 := recAssemblyOrder.Quantity
-        else
-            Qty1 := 0;
 
-        recPostedAssembly.Reset();
-        recPostedAssembly.SetRange("Order No.", OrderNo);
-        if recPostedAssembly.FindSet() then begin
-            recPostedAssembly.CalcSums(Quantity);
-            OriginalQty := recPostedAssembly.Quantity + Qty1;
-            exit(OriginalQty);
-        end;
-
-
-    end;
 }
 

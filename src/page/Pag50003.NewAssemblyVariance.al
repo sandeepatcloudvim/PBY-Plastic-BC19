@@ -155,21 +155,12 @@ page 50003 "NewAssembly Variance"
         ValueEntry: Record "Value Entry";
         ValueEntry1: Record "Value Entry";
         BOMComponent: Record "BOM Component";
-        //RawQtyPlanned: Decimal;//ds
-        //RawCostPlanned: Decimal;
-        //CostVariancePer: Decimal;
-        //QtyVariancePer: Decimal;
-        //CostAmountActual: Decimal;
-        //OriginalQty: Decimal;//ds
         Qty1: Decimal;
-        //Profit: Decimal;
-        //ProfitMargin: Decimal;
         recSalesHeader: Record "Sales Header";
         SalesHeaderArchive: Record "Sales Header Archive";
         recPostedSalesInvLine: Record "Sales Invoice Line";
         TotalCost: Decimal;
         XDocNo: Code[20];
-        //TotalRevenue: Decimal;
         ILE_Rec: Record "Item Ledger Entry";
         QtyVariance: Decimal;
 
@@ -184,12 +175,6 @@ page 50003 "NewAssembly Variance"
     var
         ILE_L: Record "Item Ledger Entry";
     begin
-        // ILE_L.Reset();
-        // ILE_L.SetRange("Document No.", Rec."Document No.");
-        // ile_l.SetRange("Posting Date", Rec."Posting Date");
-        // if ILE_L.FindSet() then
-        //     repeat
-        //     until ILE_L.Next() = 0;
     end;
 
     local procedure GetUnitCost(ItemNo: Code[20]): Decimal
@@ -198,25 +183,6 @@ page 50003 "NewAssembly Variance"
     begin
         if Itemrec.Get(ItemNo) then
             exit(Itemrec."Unit Cost");
-    end;
-
-    local procedure GetOriginallyQty(OrderNo: Code[20]): Decimal
-    var
-        recAssemblyOrder: Record "Assembly Header";
-        recPostedAssembly: Record "Posted Assembly Header";
-    begin
-        if recAssemblyOrder.Get(recAssemblyOrder."Document Type"::Order, OrderNo) then
-            Qty1 := recAssemblyOrder.Quantity
-        else
-            Qty1 := 0;
-
-        recPostedAssembly.Reset();
-        recPostedAssembly.SetRange("Order No.", OrderNo);
-        if recPostedAssembly.FindSet() then begin
-            recPostedAssembly.CalcSums(Quantity);
-            Rec.AssembleVari_OriginalQty := recPostedAssembly.Quantity + Qty1;
-            exit(Rec.AssembleVari_OriginalQty);
-        end;
     end;
 
     local procedure CopyRecord()
@@ -240,6 +206,7 @@ page 50003 "NewAssembly Variance"
 
                     ILE_Rec.CalcFields("Cost Amount (Actual)");
                     ValueEntry.Reset();
+                    ValueEntry.SetCurrentKey("Item Ledger Entry No.");
                     ValueEntry.SetRange("Item Ledger Entry No.", ILE_Rec."Entry No.");
                     ValueEntry.SetFilter(Adjustment, '%1', false);
                     if ValueEntry.FindFirst() then
@@ -247,6 +214,7 @@ page 50003 "NewAssembly Variance"
 
                     Clear(TotalCost);
                     ValueEntry1.Reset();
+                    ValueEntry1.SetCurrentKey("Document No.");
                     ValueEntry1.SetFilter("Item Ledger Entry Type", '%1', ValueEntry1."Item Ledger Entry Type"::"Assembly Consumption");
                     ValueEntry1.SetFilter(Adjustment, '%1', false);
                     ValueEntry1.SetRange("Document No.", ILE_Rec."Document No.");
@@ -271,9 +239,9 @@ page 50003 "NewAssembly Variance"
 
                         if recSalesHeader.Get(recSalesHeader."Document Type"::Order, PostedAssemblyOrder."Sales Order No.") then;
 
-
                         if ILE_Rec."Document No." <> XDocNo then begin
                             recPostedSalesInvLine.Reset();
+                            recPostedSalesInvLine.SetCurrentKey("Order No.", "No.");
                             recPostedSalesInvLine.SetRange("Order No.", PostedAssemblyOrder."Sales Order No.");
                             recPostedSalesInvLine.SetRange("No.", PostedAssemblyOrder."Item No.");
                             if recPostedSalesInvLine.FindFirst() then begin
@@ -287,12 +255,11 @@ page 50003 "NewAssembly Variance"
                             XDocNo := Rec."Document No."
                         end;
 
-
                         if recItem.Get(PostedAssemblyOrder."Item No.") then begin
                             recItem.CalcFields("Assembly BOM");
                             if recItem."Assembly BOM" then begin
-
                                 BOMComponent.Reset();
+                                BOMComponent.SetCurrentKey("Parent Item No.", "No.");
                                 BOMComponent.SetRange(Type, BOMComponent.Type::Item);
                                 BOMComponent.SetRange("Parent Item No.", recItem."No.");
                                 BOMComponent.SetRange("No.", ILE_Rec."Item No.");
@@ -326,6 +293,7 @@ page 50003 "NewAssembly Variance"
                     END;
                     ILE_Rec.CalcFields("Cost Amount (Actual)");
                     ValueEntry.Reset();
+                    ValueEntry.SetCurrentKey("Item Ledger Entry No.");
                     ValueEntry.SetRange("Item Ledger Entry No.", ILE_Rec."Entry No.");
                     ValueEntry.SetFilter(Adjustment, '%1', false);
                     if ValueEntry.FindFirst() then
@@ -334,6 +302,7 @@ page 50003 "NewAssembly Variance"
 
                     Clear(TotalCost);
                     ValueEntry1.Reset();
+                    ValueEntry1.SetCurrentKey("Document No.");
                     ValueEntry1.SetFilter("Item Ledger Entry Type", '%1', ValueEntry1."Item Ledger Entry Type"::"Assembly Consumption");
                     ValueEntry1.SetFilter(Adjustment, '%1', false);
                     ValueEntry1.SetRange("Document No.", ILE_Rec."Document No.");
@@ -343,11 +312,11 @@ page 50003 "NewAssembly Variance"
                     if PostedAssemblyOrder.Get(ILE_Rec."Document No.") then begin
                         PostedAssemblyOrder.CalcFields("Sales Order No.");
 
-
                         if recSalesHeader.Get(recSalesHeader."Document Type"::Order, PostedAssemblyOrder."Sales Order No.") then;
 
                         if ILE_Rec."Document No." <> XDocNo then begin
                             recPostedSalesInvLine.Reset();
+                            recPostedSalesInvLine.SetCurrentKey("Order No.", "No.");
                             recPostedSalesInvLine.SetRange("Order No.", PostedAssemblyOrder."Sales Order No.");
                             recPostedSalesInvLine.SetRange("No.", PostedAssemblyOrder."Item No.");
                             if recPostedSalesInvLine.FindFirst() then begin
@@ -366,15 +335,11 @@ page 50003 "NewAssembly Variance"
                             recItem.CalcFields("Assembly BOM");
                             if recItem."Assembly BOM" then begin
                                 BOMComponent.Reset();
+                                BOMComponent.SetCurrentKey("No.", "Parent Item No.");
                                 BOMComponent.SetRange(Type, BOMComponent.Type::Item);
                                 BOMComponent.SetRange("Parent Item No.", recItem."No.");
                                 BOMComponent.SetRange("No.", ILE_Rec."Item No.");
                                 if BOMComponent.FindFirst() then begin
-                                    Rec.AssembleVari_OriginalQty += BOMComponent."Quantity per";
-                                    Rec.AssembleVari_RawQtyPlanned += BOMComponent."Quantity per" * PostedAssemblyOrder.Quantity;
-                                    Rec.AssembleVari_RawCostPlanned += (BOMComponent."Quantity per" * PostedAssemblyOrder.Quantity) * GetUnitCost(BOMComponent."No.");
-                                    Rec.Modify();
-
                                     if (Abs(rec.AssembleVari_RawQtyPlanned - Abs(ILE_Rec.Quantity)) = 0) then begin
                                         rec.AssembleVari_QtyVariancePer := 0.00;
                                     end else begin
