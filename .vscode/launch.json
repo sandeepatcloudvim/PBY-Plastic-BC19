@@ -6,7 +6,7 @@
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "PBY_Testing_Sandbox",
+            "environmentName": "PBYPlasticSandbox_170522",//"PBY_Testing_Sandbox",
             "tenant": "60046d1c-7732-46b6-b059-2e21a235ddc0", 
             "startupObjectId": 22,
             "startupObjectType": "Page",
@@ -15,7 +15,6 @@
             "port": 18049,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
-
 
             //  "name": "Your own server",
             // "request": "launch",
