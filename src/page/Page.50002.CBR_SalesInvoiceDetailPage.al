@@ -6,7 +6,6 @@ page 50002 "CBR Sales Invoice Detail Page"
     SourceTable = "Sales Invoice Line";
     UsageCategory = Administration;
     ApplicationArea = All;
-
     layout
     {
         area(content)

@@ -9,7 +9,8 @@ page 50001 "CBROpen SalesOrder Detail Page"
     SourceTable = "Sales Line";
     SourceTableView = WHERE("Outstanding Quantity" = FILTER(<> 0), "Line Amount" = filter(> 0),
                             "Document Type" = FILTER(Order | "Blanket Order"));
-
+    UsageCategory = Administration;
+    ApplicationArea = All;
     layout
     {
         area(content)
@@ -89,6 +90,12 @@ page 50001 "CBROpen SalesOrder Detail Page"
                 {
                     ApplicationArea = All;
                 }
+                field("Location Code"; Rec."Location Code")
+                {
+                    ToolTip = 'Specifies the inventory location from which the items sold should be picked and where the inventory decrease is registered.';
+                    ApplicationArea = All;
+                }
+
                 field("Item Variant Descrition"; RecVariant.Description)
                 {
                     ApplicationArea = All;
@@ -142,15 +149,7 @@ page 50001 "CBROpen SalesOrder Detail Page"
                     ApplicationArea = All;
                     Caption = 'Promised Date';
                 }
-                field("Planned Delivery Date"; Rec."Planned Delivery Date")
-                {
-                    ApplicationArea = All;
-                    AccessByPermission = TableData "Sales Shipment Header" = R;
-                    CaptionML = ENU = 'Plnd Delivery Date',
-                                ESM = 'Fecha entrega planificada',
-                                FRC = 'Date livraison planifiée',
-                                ENC = 'Planned Delivery Date';
-                }
+
                 field("Planned Shipment Date"; Rec."Planned Shipment Date")
                 {
                     ApplicationArea = All;
@@ -159,6 +158,11 @@ page 50001 "CBROpen SalesOrder Detail Page"
                                 ESM = 'Fecha envío planificada',
                                 FRC = 'Date de livraison planifiée',
                                 ENC = 'Planned Shipment Date';
+                }
+                field("Planned Delivery Date"; Rec."Planned Delivery Date")
+                {
+                    ToolTip = 'Specifies the planned date that the shipment will be delivered at the customer''s address.';
+                    ApplicationArea = All;
                 }
                 field(TotalCost; TotalCost)
                 {
@@ -259,27 +263,7 @@ page 50001 "CBROpen SalesOrder Detail Page"
         TotalProfit: Decimal;
         Margin: Decimal;
 
-    // local procedure UpdateStatus();
-    // var
-    //     RecSalesLine: Record "Sales Line";
-    //     SalesHeadRec: Record "Sales Header";
-    // begin
-    //     //CBR_SS_15032018..>>
-    //     if CONFIRM('Are you sure you want to updated existing Sales Order Line status as well ?', false) then begin
-    //         SalesHeadRec.SETRANGE("Document Type", Rec."Document Type"::Order);
-    //         if SalesHeadRec.FINDSET then
-    //             repeat
-    //                 RecSalesLine.RESET;
-    //                 RecSalesLine.SETRANGE("Document Type", SalesHeadRec."Document Type");
-    //                 RecSalesLine.SETRANGE("Document No.", SalesHeadRec."No.");
-    //                 if RecSalesLine.FINDSET then
-    //                     RecSalesLine.MODIFYALL(CBR_Status, SalesHeadRec.Status);
-    //             until SalesHeadRec.NEXT = 0;
-    //         MESSAGE('Process completed sucessfully');
-    //     end;
 
-    //     //CBR_SS_15032018..<<
-    // end;
 
     local procedure ExportToExcelForWindows();
     begin
@@ -304,3 +288,4 @@ page 50001 "CBROpen SalesOrder Detail Page"
         SalesOrderPage.RUNMODAL;
     end;
 }
+
