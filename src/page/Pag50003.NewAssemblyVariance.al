@@ -242,6 +242,7 @@ page 50003 "NewAssembly Variance"
                         if ILE_Rec."Document No." <> XDocNo then begin
                             recPostedSalesInvLine.Reset();
                             recPostedSalesInvLine.SetCurrentKey("Order No.", "No.");
+                            recPostedSalesInvLine.SetRange("Posting Date", PostedAssemblyOrder."Posting Date");//AGT_ds
                             recPostedSalesInvLine.SetRange("Order No.", PostedAssemblyOrder."Sales Order No.");
                             recPostedSalesInvLine.SetRange("No.", PostedAssemblyOrder."Item No.");
                             if recPostedSalesInvLine.FindFirst() then begin
@@ -317,6 +318,7 @@ page 50003 "NewAssembly Variance"
                         if ILE_Rec."Document No." <> XDocNo then begin
                             recPostedSalesInvLine.Reset();
                             recPostedSalesInvLine.SetCurrentKey("Order No.", "No.");
+                            recPostedSalesInvLine.SetRange("Posting Date", PostedAssemblyOrder."Posting Date");//AGT_ds
                             recPostedSalesInvLine.SetRange("Order No.", PostedAssemblyOrder."Sales Order No.");
                             recPostedSalesInvLine.SetRange("No.", PostedAssemblyOrder."Item No.");
                             if recPostedSalesInvLine.FindFirst() then begin

@@ -219,6 +219,23 @@ page 50001 "CBROpen SalesOrder Detail Page"
                     //CBR_SS<<
                 end;
             }
+
+
+            action(Excel)
+            {
+                ApplicationArea = all;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+                Caption = 'Export To Excel';
+                trigger OnAction()
+                var
+
+                begin
+                    //Xmlport.Run(50000, true, false, Rec);
+                    ExportSalesOrderDetail;
+                end;
+            }
         }
     }
 
@@ -243,6 +260,122 @@ page 50001 "CBROpen SalesOrder Detail Page"
     begin
         ExportToExcelForWindows;
     end;
+    //AGT_DS++
+    local procedure ExportSalesOrderDetail()
+    Var
+        TempExcelBuffer: Record "Excel Buffer" temporary;
+        SL_L: Record "Sales Line";
+        OpenSalesOrderDetailLbl: Label 'Open Sales Order Detail'; //Sheet Name
+        ExcelFileName: Label 'Open_Sales_Order_Detail_%1_%2'; //Excel File Name
+
+    Begin
+        TempExcelBuffer.Reset();
+        TempExcelBuffer.DeleteAll();
+        TempExcelBuffer.AddColumn('Sales Order', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Document Type', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Sales Order Line', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Order Date', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Customer No', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Customer Name', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('City', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('State', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Department Code', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Item No', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Revision', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Item Description', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Location Code', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Revision Desc', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Customer PO', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Unit of Measure', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Qty', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Unit Price Excl. Tax', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Line Amount Excl. Tax', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Sales Rep', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Quantity Shipped', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Qty. to Ship', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Remaining Value', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Requested Delivery Date', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Promised Date', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Pland Ship Date', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Planned Delivery Date', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Total Cost', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Total Profit', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+        TempExcelBuffer.AddColumn('Gross Margin', false, '', True, false, false, '', TempExcelBuffer."Cell Type"::Text);
+
+        SL_L.SetFilter("Outstanding Quantity", '<>%1', 0);
+        SL_L.SetFilter("Line Amount", '>%1', 0);
+        IF SL_L.FindSet() then
+            repeat
+                IF (SL_L."Document Type" = SL_L."Document Type"::"Blanket Order") Or (SL_L."Document Type" = SL_L."Document Type"::Order) then Begin
+                    TotalCost := 0;
+                    TotalProfit := 0;
+                    RemValue := 0;
+                    LineNo := 0;
+                    TempExcelBuffer.NewRow();
+                    If RecSalesHead.Get(SL_L."Document Type", SL_L."Document No.") then begin
+                        TempExcelBuffer.AddColumn(SL_L."Document No.", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(SL_L."Document Type", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        LineNo := SL_L."Line No." div 1000;
+                        TempExcelBuffer.AddColumn(LineNo, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
+                        TempExcelBuffer.AddColumn(RecSalesHead."Order Date", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Date);
+                        TempExcelBuffer.AddColumn(RecSalesHead."Bill-to Customer No.", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        If RecCust.get(SL_L."Sell-to Customer No.") then
+                            TempExcelBuffer.AddColumn(RecCust.Name, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text)
+                        else
+                            TempExcelBuffer.AddColumn('', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(RecSalesHead."Ship-to City", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(RecSalesHead."Sell-to County", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(SL_L."Shortcut Dimension 1 Code", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(SL_L."No.", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(SL_L."Variant Code", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        If RecItem.get(SL_L."No.") then
+                            TempExcelBuffer.AddColumn(RecItem.Description, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text)
+                        else
+                            TempExcelBuffer.AddColumn('', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(SL_L."Location Code", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        if RecVariant.GET(Rec."No.", Rec."Variant Code") then
+                            TempExcelBuffer.AddColumn(RecVariant.Description, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text)
+                        else
+                            TempExcelBuffer.AddColumn('', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(RecSalesHead."External Document No.", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(SL_L."Unit of Measure", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(SL_L.Quantity, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(SL_L."Unit Price", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(SL_L."Line Amount", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(RecSalesHead."Salesperson Code", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(SL_L."Quantity Shipped", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        TempExcelBuffer.AddColumn(SL_L."Qty. to Ship", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        RemValue := SL_L."Qty. to Ship" * SL_L."Unit Price";
+                        TempExcelBuffer.AddColumn(RemValue, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
+                        TempExcelBuffer.AddColumn(SL_L."Requested Delivery Date", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::date);
+                        TempExcelBuffer.AddColumn(RecSalesHead."Promised Delivery Date", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Date);
+                        TempExcelBuffer.AddColumn(SL_L."Planned Shipment Date", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::date);
+                        TempExcelBuffer.AddColumn(SL_L."Planned Delivery Date", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Date);
+                        TotalCost := (SL_L.Quantity * SL_L."Unit Cost");
+                        TotalProfit := (SL_L."Line Amount" - TotalCost);
+                        if SL_L.Quantity > 0 then
+                            TempExcelBuffer.AddColumn(TotalCost, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number)
+                        Else
+                            TempExcelBuffer.AddColumn('', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
+                        TempExcelBuffer.AddColumn(TotalProfit, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
+                        if TotalCost > 0 then
+                            TempExcelBuffer.AddColumn((TotalProfit / TotalCost) * 100, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number)
+                        Else
+                            TempExcelBuffer.AddColumn('', false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
+                    end;
+                End
+            until SL_L.Next() = 0;
+        TempExcelBuffer.CreateNewBook(OpenSalesOrderDetailLbl);
+        TempExcelBuffer.WriteSheet(OpenSalesOrderDetailLbl, CompanyName, UserId);
+        TempExcelBuffer.CloseBook();
+        TempExcelBuffer.SetFriendlyFilename(StrSubstNo(ExcelFileName, CurrentDateTime, UserId));
+        TempExcelBuffer.OpenExcel();
+
+
+    End;
+    //AGT_DS--
+
+
 
     var
         RecCust: Record Customer;
@@ -288,4 +421,3 @@ page 50001 "CBROpen SalesOrder Detail Page"
         SalesOrderPage.RUNMODAL;
     end;
 }
-
