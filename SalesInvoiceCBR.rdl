@@ -2183,30 +2183,28 @@
                                               </Paragraph>
                                             </Paragraphs>
                                             <rd:DefaultName>UnitPrice</rd:DefaultName>
+                                            <Visibility>
+                                              <Hidden>=IIF(Fields!Quantity_Line.Value&lt;&gt;"",false,true)</Hidden>
+                                            </Visibility>
                                             <Style>
                                               <Border>
                                                 <Style>None</Style>
                                               </Border>
                                               <TopBorder>
-                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
-                                                <Width>1pt</Width>
                                               </TopBorder>
                                               <LeftBorder>
-                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
-                                                <Width>1pt</Width>
                                               </LeftBorder>
                                               <RightBorder>
-                                                <Color>Black</Color>
                                                 <Style>Solid</Style>
-                                                <Width>1pt</Width>
                                               </RightBorder>
                                               <VerticalAlign>Middle</VerticalAlign>
                                               <PaddingLeft>5pt</PaddingLeft>
                                               <PaddingRight>5pt</PaddingRight>
                                             </Style>
                                           </Textbox>
+                                          <rd:Selected>true</rd:Selected>
                                         </CellContents>
                                       </TablixCell>
                                       <TablixCell>
