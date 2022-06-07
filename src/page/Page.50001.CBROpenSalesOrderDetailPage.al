@@ -134,7 +134,7 @@ page 50001 "CBROpen SalesOrder Detail Page"
                 {
                     ApplicationArea = All;
                 }
-                field("Remaining Qty to be Shipped"; Rec."Qty. to Ship")
+                field("Remaining Qty to be Shipped"; Rec.Quantity - REC."Quantity Shipped")//AGT_ds
                 {
                     ApplicationArea = All;
                 }
@@ -247,7 +247,7 @@ page 50001 "CBROpen SalesOrder Detail Page"
         if RecItem.GET(Rec."No.") then;
         LineNo := Rec."Line No." div 1000;
         //RemQtytoship := Quantity-"Quantity Shipped";
-        RemValue := Rec."Qty. to Ship" * Rec."Unit Price";
+        RemValue := (Rec.Quantity - Rec."Quantity Shipped") * Rec."Unit Price";//AGT_DS
         if RecVariant.GET(Rec."No.", Rec."Variant Code") then;
         if RecCust.GET(Rec."Sell-to Customer No.") then;
 
@@ -346,8 +346,8 @@ page 50001 "CBROpen SalesOrder Detail Page"
                         TempExcelBuffer.AddColumn(SL_L."Line Amount", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
                         TempExcelBuffer.AddColumn(RecSalesHead."Salesperson Code", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
                         TempExcelBuffer.AddColumn(SL_L."Quantity Shipped", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-                        TempExcelBuffer.AddColumn(SL_L."Qty. to Ship", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
-                        RemValue := SL_L."Qty. to Ship" * SL_L."Unit Price";
+                        TempExcelBuffer.AddColumn(SL_L.Quantity - SL_L."Quantity Shipped", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Text);
+                        RemValue := (SL_L.Quantity - SL_L."Quantity Shipped") * SL_L."Unit Price";//AGT_DS
                         TempExcelBuffer.AddColumn(RemValue, false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Number);
                         TempExcelBuffer.AddColumn(SL_L."Requested Delivery Date", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::date);
                         TempExcelBuffer.AddColumn(RecSalesHead."Promised Delivery Date", false, '', false, false, false, '', TempExcelBuffer."Cell Type"::Date);

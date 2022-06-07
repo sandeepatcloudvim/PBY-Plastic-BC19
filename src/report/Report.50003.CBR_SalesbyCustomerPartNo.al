@@ -4,7 +4,7 @@ report 50003 "Sales by Customer Part No."
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     DefaultLayout = RDLC;
-    RDLCLayout = './Sales by Customer.rdl';
+    RDLCLayout = './SalesbyCustomer.rdl';
 
     dataset
     {
