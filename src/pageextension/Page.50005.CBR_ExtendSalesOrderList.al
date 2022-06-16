@@ -26,6 +26,19 @@ pageextension 50041 CBRExtSalesOrderList extends "Sales Order List"
                                 ENC = 'View the history of Sales Orders line that have been posted for the document.';
             }
         }
+        addlast(reporting)
+        {
+            action("Master Sales")
+            {
+                ApplicationArea = All;
+                Caption = 'Master Sales';
+                Image = "Report";
+                Promoted = true;
+                PromotedCategory = Report;
+                PromotedIsBig = true;
+                RunObject = Report "Customer Wise Sales Report";
+            }
+        }
 
     }
 
