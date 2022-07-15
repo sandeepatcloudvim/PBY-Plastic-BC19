@@ -11,6 +11,415 @@
       <rd:DataSourceID>cdad41c3-6ac2-4684-8de6-3b2c8f278a3d</rd:DataSourceID>
     </DataSource>
   </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+      <Fields>
+        <Field Name="ReportTitle">
+          <DataField>ReportTitle</DataField>
+        </Field>
+        <Field Name="Year_">
+          <DataField>Year_</DataField>
+        </Field>
+        <Field Name="SH_CustomerNo">
+          <DataField>SH_CustomerNo</DataField>
+        </Field>
+        <Field Name="SH_Name">
+          <DataField>SH_Name</DataField>
+        </Field>
+        <Field Name="Customer_Salesperson">
+          <DataField>Customer_Salesperson</DataField>
+        </Field>
+        <Field Name="Country_Region">
+          <DataField>Country_Region</DataField>
+        </Field>
+        <Field Name="CategoryCode">
+          <DataField>CategoryCode</DataField>
+        </Field>
+        <Field Name="ItemNo">
+          <DataField>ItemNo</DataField>
+        </Field>
+        <Field Name="ItemDesc">
+          <DataField>ItemDesc</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="TotalLbl">
+          <DataField>TotalLbl</DataField>
+        </Field>
+        <Field Name="TerritoryLbl">
+          <DataField>TerritoryLbl</DataField>
+        </Field>
+        <Field Name="Jan">
+          <DataField>Jan</DataField>
+        </Field>
+        <Field Name="JanFormat">
+          <DataField>JanFormat</DataField>
+        </Field>
+        <Field Name="Feb">
+          <DataField>Feb</DataField>
+        </Field>
+        <Field Name="FebFormat">
+          <DataField>FebFormat</DataField>
+        </Field>
+        <Field Name="Mar">
+          <DataField>Mar</DataField>
+        </Field>
+        <Field Name="MarFormat">
+          <DataField>MarFormat</DataField>
+        </Field>
+        <Field Name="Apr">
+          <DataField>Apr</DataField>
+        </Field>
+        <Field Name="AprFormat">
+          <DataField>AprFormat</DataField>
+        </Field>
+        <Field Name="May">
+          <DataField>May</DataField>
+        </Field>
+        <Field Name="MayFormat">
+          <DataField>MayFormat</DataField>
+        </Field>
+        <Field Name="Jun">
+          <DataField>Jun</DataField>
+        </Field>
+        <Field Name="JunFormat">
+          <DataField>JunFormat</DataField>
+        </Field>
+        <Field Name="Jul">
+          <DataField>Jul</DataField>
+        </Field>
+        <Field Name="JulFormat">
+          <DataField>JulFormat</DataField>
+        </Field>
+        <Field Name="Aug">
+          <DataField>Aug</DataField>
+        </Field>
+        <Field Name="AugFormat">
+          <DataField>AugFormat</DataField>
+        </Field>
+        <Field Name="Sep">
+          <DataField>Sep</DataField>
+        </Field>
+        <Field Name="SepFormat">
+          <DataField>SepFormat</DataField>
+        </Field>
+        <Field Name="Oct">
+          <DataField>Oct</DataField>
+        </Field>
+        <Field Name="OctFormat">
+          <DataField>OctFormat</DataField>
+        </Field>
+        <Field Name="Nov">
+          <DataField>Nov</DataField>
+        </Field>
+        <Field Name="NovFormat">
+          <DataField>NovFormat</DataField>
+        </Field>
+        <Field Name="Dec">
+          <DataField>Dec</DataField>
+        </Field>
+        <Field Name="DecFormat">
+          <DataField>DecFormat</DataField>
+        </Field>
+        <Field Name="Jan1">
+          <DataField>Jan1</DataField>
+        </Field>
+        <Field Name="Jan1Format">
+          <DataField>Jan1Format</DataField>
+        </Field>
+        <Field Name="Feb1">
+          <DataField>Feb1</DataField>
+        </Field>
+        <Field Name="Feb1Format">
+          <DataField>Feb1Format</DataField>
+        </Field>
+        <Field Name="Mar1">
+          <DataField>Mar1</DataField>
+        </Field>
+        <Field Name="Mar1Format">
+          <DataField>Mar1Format</DataField>
+        </Field>
+        <Field Name="Apr1">
+          <DataField>Apr1</DataField>
+        </Field>
+        <Field Name="Apr1Format">
+          <DataField>Apr1Format</DataField>
+        </Field>
+        <Field Name="May1">
+          <DataField>May1</DataField>
+        </Field>
+        <Field Name="May1Format">
+          <DataField>May1Format</DataField>
+        </Field>
+        <Field Name="Jun1">
+          <DataField>Jun1</DataField>
+        </Field>
+        <Field Name="Jun1Format">
+          <DataField>Jun1Format</DataField>
+        </Field>
+        <Field Name="Jul1">
+          <DataField>Jul1</DataField>
+        </Field>
+        <Field Name="Jul1Format">
+          <DataField>Jul1Format</DataField>
+        </Field>
+        <Field Name="Aug1">
+          <DataField>Aug1</DataField>
+        </Field>
+        <Field Name="Aug1Format">
+          <DataField>Aug1Format</DataField>
+        </Field>
+        <Field Name="Sep1">
+          <DataField>Sep1</DataField>
+        </Field>
+        <Field Name="Sep1Format">
+          <DataField>Sep1Format</DataField>
+        </Field>
+        <Field Name="Oct1">
+          <DataField>Oct1</DataField>
+        </Field>
+        <Field Name="Oct1Format">
+          <DataField>Oct1Format</DataField>
+        </Field>
+        <Field Name="Nov1">
+          <DataField>Nov1</DataField>
+        </Field>
+        <Field Name="Nov1Format">
+          <DataField>Nov1Format</DataField>
+        </Field>
+        <Field Name="Dec1">
+          <DataField>Dec1</DataField>
+        </Field>
+        <Field Name="Dec1Format">
+          <DataField>Dec1Format</DataField>
+        </Field>
+        <Field Name="Jan2">
+          <DataField>Jan2</DataField>
+        </Field>
+        <Field Name="Jan2Format">
+          <DataField>Jan2Format</DataField>
+        </Field>
+        <Field Name="Feb2">
+          <DataField>Feb2</DataField>
+        </Field>
+        <Field Name="Feb2Format">
+          <DataField>Feb2Format</DataField>
+        </Field>
+        <Field Name="Mar2">
+          <DataField>Mar2</DataField>
+        </Field>
+        <Field Name="Mar2Format">
+          <DataField>Mar2Format</DataField>
+        </Field>
+        <Field Name="Apr2">
+          <DataField>Apr2</DataField>
+        </Field>
+        <Field Name="Apr2Format">
+          <DataField>Apr2Format</DataField>
+        </Field>
+        <Field Name="May2">
+          <DataField>May2</DataField>
+        </Field>
+        <Field Name="May2Format">
+          <DataField>May2Format</DataField>
+        </Field>
+        <Field Name="Jun2">
+          <DataField>Jun2</DataField>
+        </Field>
+        <Field Name="Jun2Format">
+          <DataField>Jun2Format</DataField>
+        </Field>
+        <Field Name="Jul2">
+          <DataField>Jul2</DataField>
+        </Field>
+        <Field Name="Jul2Format">
+          <DataField>Jul2Format</DataField>
+        </Field>
+        <Field Name="Aug2">
+          <DataField>Aug2</DataField>
+        </Field>
+        <Field Name="Aug2Format">
+          <DataField>Aug2Format</DataField>
+        </Field>
+        <Field Name="Sep2">
+          <DataField>Sep2</DataField>
+        </Field>
+        <Field Name="Sep2Format">
+          <DataField>Sep2Format</DataField>
+        </Field>
+        <Field Name="Oct2">
+          <DataField>Oct2</DataField>
+        </Field>
+        <Field Name="Oct2Format">
+          <DataField>Oct2Format</DataField>
+        </Field>
+        <Field Name="Nov2">
+          <DataField>Nov2</DataField>
+        </Field>
+        <Field Name="Nov2Format">
+          <DataField>Nov2Format</DataField>
+        </Field>
+        <Field Name="Dec2">
+          <DataField>Dec2</DataField>
+        </Field>
+        <Field Name="Dec2Format">
+          <DataField>Dec2Format</DataField>
+        </Field>
+        <Field Name="RowTotal">
+          <DataField>RowTotal</DataField>
+        </Field>
+        <Field Name="RowTotalFormat">
+          <DataField>RowTotalFormat</DataField>
+        </Field>
+        <Field Name="RowTotal1">
+          <DataField>RowTotal1</DataField>
+        </Field>
+        <Field Name="RowTotal1Format">
+          <DataField>RowTotal1Format</DataField>
+        </Field>
+        <Field Name="RowTotal2">
+          <DataField>RowTotal2</DataField>
+        </Field>
+        <Field Name="RowTotal2Format">
+          <DataField>RowTotal2Format</DataField>
+        </Field>
+        <Field Name="ReportFilters">
+          <DataField>ReportFilters</DataField>
+        </Field>
+        <Field Name="ReportHeader1">
+          <DataField>ReportHeader1</DataField>
+        </Field>
+        <Field Name="ReportHeader2">
+          <DataField>ReportHeader2</DataField>
+        </Field>
+        <Field Name="ReportHeader3">
+          <DataField>ReportHeader3</DataField>
+        </Field>
+        <Field Name="ReportHeader4">
+          <DataField>ReportHeader4</DataField>
+        </Field>
+        <Field Name="ReportHeader5">
+          <DataField>ReportHeader5</DataField>
+        </Field>
+        <Field Name="ReportHeader6">
+          <DataField>ReportHeader6</DataField>
+        </Field>
+        <Field Name="ReportHeader7">
+          <DataField>ReportHeader7</DataField>
+        </Field>
+        <Field Name="ReportHeader8">
+          <DataField>ReportHeader8</DataField>
+        </Field>
+        <Field Name="ReportHeader9">
+          <DataField>ReportHeader9</DataField>
+        </Field>
+        <Field Name="ReportHeader10">
+          <DataField>ReportHeader10</DataField>
+        </Field>
+        <Field Name="ReportHeader11">
+          <DataField>ReportHeader11</DataField>
+        </Field>
+        <Field Name="ReportHeader12">
+          <DataField>ReportHeader12</DataField>
+        </Field>
+        <Field Name="ReportHeader13">
+          <DataField>ReportHeader13</DataField>
+        </Field>
+        <Field Name="ReportHeader14">
+          <DataField>ReportHeader14</DataField>
+        </Field>
+        <Field Name="ReportHeader15">
+          <DataField>ReportHeader15</DataField>
+        </Field>
+        <Field Name="ReportHeader16">
+          <DataField>ReportHeader16</DataField>
+        </Field>
+        <Field Name="ReportHeader17">
+          <DataField>ReportHeader17</DataField>
+        </Field>
+        <Field Name="ReportHeader18">
+          <DataField>ReportHeader18</DataField>
+        </Field>
+        <Field Name="ReportHeader19">
+          <DataField>ReportHeader19</DataField>
+        </Field>
+        <Field Name="ReportHeader20">
+          <DataField>ReportHeader20</DataField>
+        </Field>
+        <Field Name="ReportHeader21">
+          <DataField>ReportHeader21</DataField>
+        </Field>
+        <Field Name="ReportHeader22">
+          <DataField>ReportHeader22</DataField>
+        </Field>
+        <Field Name="ReportHeader23">
+          <DataField>ReportHeader23</DataField>
+        </Field>
+        <Field Name="ReportHeader24">
+          <DataField>ReportHeader24</DataField>
+        </Field>
+        <Field Name="ReportHeader25">
+          <DataField>ReportHeader25</DataField>
+        </Field>
+        <Field Name="ReportHeader26">
+          <DataField>ReportHeader26</DataField>
+        </Field>
+        <Field Name="ReportHeader27">
+          <DataField>ReportHeader27</DataField>
+        </Field>
+        <Field Name="ReportHeader28">
+          <DataField>ReportHeader28</DataField>
+        </Field>
+        <Field Name="ReportHeader29">
+          <DataField>ReportHeader29</DataField>
+        </Field>
+        <Field Name="ReportHeader30">
+          <DataField>ReportHeader30</DataField>
+        </Field>
+        <Field Name="ReportHeader31">
+          <DataField>ReportHeader31</DataField>
+        </Field>
+        <Field Name="ReportHeader32">
+          <DataField>ReportHeader32</DataField>
+        </Field>
+        <Field Name="ReportHeader33">
+          <DataField>ReportHeader33</DataField>
+        </Field>
+        <Field Name="ReportHeader34">
+          <DataField>ReportHeader34</DataField>
+        </Field>
+        <Field Name="ReportHeader35">
+          <DataField>ReportHeader35</DataField>
+        </Field>
+        <Field Name="ReportHeader36">
+          <DataField>ReportHeader36</DataField>
+        </Field>
+        <Field Name="NoofMonth">
+          <DataField>NoofMonth</DataField>
+        </Field>
+        <Field Name="YearFirst">
+          <DataField>YearFirst</DataField>
+        </Field>
+        <Field Name="YearSecond">
+          <DataField>YearSecond</DataField>
+        </Field>
+        <Field Name="TotalAmtMonthWise">
+          <DataField>TotalAmtMonthWise</DataField>
+        </Field>
+        <Field Name="TotalAmtMonthWiseFormat">
+          <DataField>TotalAmtMonthWiseFormat</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
   <ReportSections>
     <ReportSection>
       <Body>
@@ -2867,21 +3276,28 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(sum(Fields!Dec1.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Dec1.Value)</Value>
+                                  <Value>=Fields!Dec1.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2895,6 +3311,7 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <BackgroundColor>White</BackgroundColor>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -2908,21 +3325,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(sum(Fields!Nov1.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Nov1.Value)</Value>
+                                  <Value>=Fields!Nov1.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2949,21 +3366,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(sum(Fields!Oct1.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Oct1.Value)</Value>
+                                  <Value>=Fields!Oct1.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -2977,6 +3394,7 @@
                             <Border>
                               <Style>None</Style>
                             </Border>
+                            <BackgroundColor>White</BackgroundColor>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -2990,21 +3408,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(sum(Fields!Sep1.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Sep1.Value)</Value>
+                                  <Value>=Fields!Sep1.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3031,21 +3449,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(sum(Fields!Aug1.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Aug1.Value)</Value>
+                                  <Value>=Fields!Aug1.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3072,21 +3490,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(sum(Fields!Jul1.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Jul1.Value)</Value>
+                                  <Value>=Fields!Jul1.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3113,21 +3531,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(sum(Fields!Jun1.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Jun1.Value)</Value>
+                                  <Value>=Fields!Jun1.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3154,21 +3572,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(sum(Fields!May1.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!May1.Value)</Value>
+                                  <Value>=Fields!May1.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3195,21 +3613,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(sum(Fields!Apr1.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Apr1.Value)</Value>
+                                  <Value>=Fields!Apr1.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3236,21 +3654,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(sum(Fields!Mar1.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Mar1.Value)</Value>
+                                  <Value>=Fields!Mar1.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3277,21 +3695,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(sum(Fields!Feb1.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Feb1.Value)</Value>
+                                  <Value>=Fields!Feb1.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3318,21 +3736,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(sum(Fields!Jan1.Value)&lt;&gt;0,Parameters!CurrencySymbol.Value,"")</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Jan1.Value)</Value>
+                                  <Value>=Fields!Jan1.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3359,21 +3777,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(Sum(Fields!RowTotal1.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!RowTotal1.Value)</Value>
+                                  <Value>=Fields!RowTotal1.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3400,21 +3818,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(sum(Fields!Dec.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Dec.Value)</Value>
+                                  <Value>=Fields!Dec.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3441,21 +3859,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=If(sum(Fields!Nov.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Nov.Value)</Value>
+                                  <Value>=Fields!Nov.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3482,21 +3900,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=If(sum(Fields!Oct.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Oct.Value)</Value>
+                                  <Value>=Fields!Oct.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3523,21 +3941,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=If(sum(Fields!Sep.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Sep.Value)</Value>
+                                  <Value>=Fields!Sep.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3564,21 +3982,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=If(sum(Fields!Aug.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Aug.Value)</Value>
+                                  <Value>=Fields!Aug.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3605,21 +4023,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=If(sum(Fields!Jul.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Jul.Value)</Value>
+                                  <Value>=Fields!Jul.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3646,21 +4064,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=If(sum(Fields!Jun.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Jun.Value)</Value>
+                                  <Value>=Fields!Jun.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3687,21 +4105,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=If(sum(Fields!May.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!May.Value)</Value>
+                                  <Value>=Fields!May.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3728,21 +4146,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=If(sum(Fields!Apr.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Apr.Value)</Value>
+                                  <Value>=Fields!Apr.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3769,21 +4187,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=If(sum(Fields!Mar.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Mar.Value)</Value>
+                                  <Value>=Fields!Mar.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3810,21 +4228,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=If(sum(Fields!Feb.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Feb.Value)</Value>
+                                  <Value>=Fields!Feb.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3851,21 +4269,21 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=If(sum(Fields!Jan.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
-                                  <Value>=Sum(Fields!Jan.Value)</Value>
+                                  <Value>=Fields!Jan.Value</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3892,12 +4310,12 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Parameters!CurrencySymbol.Value</Value>
+                                  <Value>=IIf(Sum(Fields!RowTotal.Value)=0,"",Parameters!CurrencySymbol.Value)</Value>
                                   <Style>
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                                 <TextRun>
@@ -3906,7 +4324,7 @@
                                     <FontFamily>Segoe UI</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
-                                    <Format>#,0;-#,0;''</Format>
+                                    <Format>#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -3979,6 +4397,925 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox36</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.14247in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox43">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Dec1.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox43</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox44">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Nov1.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox44</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox45">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Oct1.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox45</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                            <BackgroundColor>White</BackgroundColor>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox50">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Sep1.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox50</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox52">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Aug1.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox52</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox53">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Jul1.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox53</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox55">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Jun1.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox55</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox57">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!May1.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox57</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox58">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Apr1.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox58</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox59">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Mar1.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox59</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox60">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Feb1.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox60</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox61">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Jan1.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox61</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox63">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIf(Sum(Fields!RowTotal1.Value)=0,"No Sale",Parameters!CurrencySymbol.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0;-#,0;''</Format>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=Sum(Fields!RowTotal1.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0;-#,0;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox63</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox65">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Dec.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox65</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox66">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Nov.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox66</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox67">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Oct.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox67</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox68">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Sep.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox68</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox69">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Aug.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox69</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox71">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Jul.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox71</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox73">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Jun.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox73</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox74">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!May.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox74</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox75">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Apr.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox75</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox76">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Mar.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox76</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox77">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Feb.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox77</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox79">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Sum(Fields!Jan.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0.00</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox79</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox81">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=IIf(Sum(Fields!RowTotal.Value)=0,"No Sale",Parameters!CurrencySymbol.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0;-#,0;''</Format>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=Sum(Fields!RowTotal.Value)</Value>
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Format>#,0;-#,0;''</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox81</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox82">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox82</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Style>None</Style>
+                            </Border>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox83">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Segoe UI</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Right</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox83</rd:DefaultName>
                           <Style>
                             <Border>
                               <Style>None</Style>
@@ -4689,11 +6026,191 @@
                     </TablixMember>
                   </TablixMembers>
                 </TablixMember>
+                <TablixMember>
+                  <TablixHeader>
+                    <Size>0.26389in</Size>
+                    <CellContents>
+                      <Textbox Name="Textbox29">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value />
+                                <Style>
+                                  <FontFamily>Segoe UI</FontFamily>
+                                  <FontSize>8pt</FontSize>
+                                  <FontWeight>Bold</FontWeight>
+                                </Style>
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox29</rd:DefaultName>
+                        <Style>
+                          <Border>
+                            <Style>None</Style>
+                          </Border>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
+                    </CellContents>
+                  </TablixHeader>
+                  <TablixMembers>
+                    <TablixMember>
+                      <TablixHeader>
+                        <Size>0.17592in</Size>
+                        <CellContents>
+                          <Textbox Name="Textbox37">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value />
+                                    <Style>
+                                      <FontFamily>Segoe UI</FontFamily>
+                                      <FontSize>8pt</FontSize>
+                                      <FontWeight>Bold</FontWeight>
+                                    </Style>
+                                  </TextRun>
+                                </TextRuns>
+                                <Style />
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>Textbox37</rd:DefaultName>
+                            <Style>
+                              <Border>
+                                <Style>None</Style>
+                              </Border>
+                              <PaddingLeft>2pt</PaddingLeft>
+                              <PaddingRight>2pt</PaddingRight>
+                              <PaddingTop>2pt</PaddingTop>
+                              <PaddingBottom>2pt</PaddingBottom>
+                            </Style>
+                          </Textbox>
+                        </CellContents>
+                      </TablixHeader>
+                      <TablixMembers>
+                        <TablixMember>
+                          <TablixHeader>
+                            <Size>0.15972in</Size>
+                            <CellContents>
+                              <Textbox Name="Textbox39">
+                                <CanGrow>true</CanGrow>
+                                <KeepTogether>true</KeepTogether>
+                                <Paragraphs>
+                                  <Paragraph>
+                                    <TextRuns>
+                                      <TextRun>
+                                        <Value />
+                                        <Style>
+                                          <FontFamily>Segoe UI</FontFamily>
+                                          <FontSize>8pt</FontSize>
+                                          <FontWeight>Bold</FontWeight>
+                                        </Style>
+                                      </TextRun>
+                                    </TextRuns>
+                                    <Style />
+                                  </Paragraph>
+                                </Paragraphs>
+                                <rd:DefaultName>Textbox39</rd:DefaultName>
+                                <Style>
+                                  <Border>
+                                    <Style>None</Style>
+                                  </Border>
+                                  <BackgroundColor>WhiteSmoke</BackgroundColor>
+                                </Style>
+                              </Textbox>
+                            </CellContents>
+                          </TablixHeader>
+                          <TablixMembers>
+                            <TablixMember>
+                              <TablixHeader>
+                                <Size>0.13889in</Size>
+                                <CellContents>
+                                  <Textbox Name="Textbox41">
+                                    <CanGrow>true</CanGrow>
+                                    <KeepTogether>true</KeepTogether>
+                                    <Paragraphs>
+                                      <Paragraph>
+                                        <TextRuns>
+                                          <TextRun>
+                                            <Value />
+                                            <Style>
+                                              <FontFamily>Segoe UI</FontFamily>
+                                              <FontSize>8pt</FontSize>
+                                              <FontWeight>Bold</FontWeight>
+                                            </Style>
+                                          </TextRun>
+                                        </TextRuns>
+                                        <Style />
+                                      </Paragraph>
+                                    </Paragraphs>
+                                    <rd:DefaultName>Textbox41</rd:DefaultName>
+                                    <Style>
+                                      <Border>
+                                        <Style>None</Style>
+                                      </Border>
+                                      <BackgroundColor>WhiteSmoke</BackgroundColor>
+                                    </Style>
+                                  </Textbox>
+                                </CellContents>
+                              </TablixHeader>
+                              <TablixMembers>
+                                <TablixMember>
+                                  <TablixHeader>
+                                    <Size>1.49422in</Size>
+                                    <CellContents>
+                                      <Textbox Name="Textbox42">
+                                        <CanGrow>true</CanGrow>
+                                        <KeepTogether>true</KeepTogether>
+                                        <Paragraphs>
+                                          <Paragraph>
+                                            <TextRuns>
+                                              <TextRun>
+                                                <Value />
+                                                <Style>
+                                                  <FontFamily>Segoe UI</FontFamily>
+                                                  <FontSize>8pt</FontSize>
+                                                  <FontWeight>Bold</FontWeight>
+                                                </Style>
+                                              </TextRun>
+                                            </TextRuns>
+                                            <Style />
+                                          </Paragraph>
+                                        </Paragraphs>
+                                        <rd:DefaultName>Textbox42</rd:DefaultName>
+                                        <Style>
+                                          <Border>
+                                            <Style>None</Style>
+                                          </Border>
+                                          <BackgroundColor>WhiteSmoke</BackgroundColor>
+                                        </Style>
+                                      </Textbox>
+                                    </CellContents>
+                                  </TablixHeader>
+                                </TablixMember>
+                              </TablixMembers>
+                            </TablixMember>
+                          </TablixMembers>
+                        </TablixMember>
+                      </TablixMembers>
+                    </TablixMember>
+                  </TablixMembers>
+                  <KeepWithGroup>Before</KeepWithGroup>
+                </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
             <RepeatRowHeaders>true</RepeatRowHeaders>
             <DataSetName>DataSet_Result</DataSetName>
-            <Height>0.53126in</Height>
+            <Height>0.67373in</Height>
             <Width>21.87242in</Width>
             <Style>
               <Border>
@@ -4702,10 +6219,10 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>2.77815cm</Height>
+        <Height>2.75169cm</Height>
         <Style />
       </Body>
-      <Width>55.55596cm</Width>
+      <Width>55.55595cm</Width>
       <Page>
         <PageHeader>
           <Height>1.15353cm</Height>
@@ -4934,413 +6451,4 @@ End Function
   <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
-  <DataSets>
-    <DataSet Name="DataSet_Result">
-      <Fields>
-        <Field Name="ReportTitle">
-          <DataField>ReportTitle</DataField>
-        </Field>
-        <Field Name="Year_">
-          <DataField>Year_</DataField>
-        </Field>
-        <Field Name="SH_CustomerNo">
-          <DataField>SH_CustomerNo</DataField>
-        </Field>
-        <Field Name="SH_Name">
-          <DataField>SH_Name</DataField>
-        </Field>
-        <Field Name="Customer_Salesperson">
-          <DataField>Customer_Salesperson</DataField>
-        </Field>
-        <Field Name="Country_Region">
-          <DataField>Country_Region</DataField>
-        </Field>
-        <Field Name="CategoryCode">
-          <DataField>CategoryCode</DataField>
-        </Field>
-        <Field Name="ItemNo">
-          <DataField>ItemNo</DataField>
-        </Field>
-        <Field Name="ItemDesc">
-          <DataField>ItemDesc</DataField>
-        </Field>
-        <Field Name="Amount">
-          <DataField>Amount</DataField>
-        </Field>
-        <Field Name="AmountFormat">
-          <DataField>AmountFormat</DataField>
-        </Field>
-        <Field Name="TotalLbl">
-          <DataField>TotalLbl</DataField>
-        </Field>
-        <Field Name="TerritoryLbl">
-          <DataField>TerritoryLbl</DataField>
-        </Field>
-        <Field Name="Jan">
-          <DataField>Jan</DataField>
-        </Field>
-        <Field Name="JanFormat">
-          <DataField>JanFormat</DataField>
-        </Field>
-        <Field Name="Feb">
-          <DataField>Feb</DataField>
-        </Field>
-        <Field Name="FebFormat">
-          <DataField>FebFormat</DataField>
-        </Field>
-        <Field Name="Mar">
-          <DataField>Mar</DataField>
-        </Field>
-        <Field Name="MarFormat">
-          <DataField>MarFormat</DataField>
-        </Field>
-        <Field Name="Apr">
-          <DataField>Apr</DataField>
-        </Field>
-        <Field Name="AprFormat">
-          <DataField>AprFormat</DataField>
-        </Field>
-        <Field Name="May">
-          <DataField>May</DataField>
-        </Field>
-        <Field Name="MayFormat">
-          <DataField>MayFormat</DataField>
-        </Field>
-        <Field Name="Jun">
-          <DataField>Jun</DataField>
-        </Field>
-        <Field Name="JunFormat">
-          <DataField>JunFormat</DataField>
-        </Field>
-        <Field Name="Jul">
-          <DataField>Jul</DataField>
-        </Field>
-        <Field Name="JulFormat">
-          <DataField>JulFormat</DataField>
-        </Field>
-        <Field Name="Aug">
-          <DataField>Aug</DataField>
-        </Field>
-        <Field Name="AugFormat">
-          <DataField>AugFormat</DataField>
-        </Field>
-        <Field Name="Sep">
-          <DataField>Sep</DataField>
-        </Field>
-        <Field Name="SepFormat">
-          <DataField>SepFormat</DataField>
-        </Field>
-        <Field Name="Oct">
-          <DataField>Oct</DataField>
-        </Field>
-        <Field Name="OctFormat">
-          <DataField>OctFormat</DataField>
-        </Field>
-        <Field Name="Nov">
-          <DataField>Nov</DataField>
-        </Field>
-        <Field Name="NovFormat">
-          <DataField>NovFormat</DataField>
-        </Field>
-        <Field Name="Dec">
-          <DataField>Dec</DataField>
-        </Field>
-        <Field Name="DecFormat">
-          <DataField>DecFormat</DataField>
-        </Field>
-        <Field Name="Jan1">
-          <DataField>Jan1</DataField>
-        </Field>
-        <Field Name="Jan1Format">
-          <DataField>Jan1Format</DataField>
-        </Field>
-        <Field Name="Feb1">
-          <DataField>Feb1</DataField>
-        </Field>
-        <Field Name="Feb1Format">
-          <DataField>Feb1Format</DataField>
-        </Field>
-        <Field Name="Mar1">
-          <DataField>Mar1</DataField>
-        </Field>
-        <Field Name="Mar1Format">
-          <DataField>Mar1Format</DataField>
-        </Field>
-        <Field Name="Apr1">
-          <DataField>Apr1</DataField>
-        </Field>
-        <Field Name="Apr1Format">
-          <DataField>Apr1Format</DataField>
-        </Field>
-        <Field Name="May1">
-          <DataField>May1</DataField>
-        </Field>
-        <Field Name="May1Format">
-          <DataField>May1Format</DataField>
-        </Field>
-        <Field Name="Jun1">
-          <DataField>Jun1</DataField>
-        </Field>
-        <Field Name="Jun1Format">
-          <DataField>Jun1Format</DataField>
-        </Field>
-        <Field Name="Jul1">
-          <DataField>Jul1</DataField>
-        </Field>
-        <Field Name="Jul1Format">
-          <DataField>Jul1Format</DataField>
-        </Field>
-        <Field Name="Aug1">
-          <DataField>Aug1</DataField>
-        </Field>
-        <Field Name="Aug1Format">
-          <DataField>Aug1Format</DataField>
-        </Field>
-        <Field Name="Sep1">
-          <DataField>Sep1</DataField>
-        </Field>
-        <Field Name="Sep1Format">
-          <DataField>Sep1Format</DataField>
-        </Field>
-        <Field Name="Oct1">
-          <DataField>Oct1</DataField>
-        </Field>
-        <Field Name="Oct1Format">
-          <DataField>Oct1Format</DataField>
-        </Field>
-        <Field Name="Nov1">
-          <DataField>Nov1</DataField>
-        </Field>
-        <Field Name="Nov1Format">
-          <DataField>Nov1Format</DataField>
-        </Field>
-        <Field Name="Dec1">
-          <DataField>Dec1</DataField>
-        </Field>
-        <Field Name="Dec1Format">
-          <DataField>Dec1Format</DataField>
-        </Field>
-        <Field Name="Jan2">
-          <DataField>Jan2</DataField>
-        </Field>
-        <Field Name="Jan2Format">
-          <DataField>Jan2Format</DataField>
-        </Field>
-        <Field Name="Feb2">
-          <DataField>Feb2</DataField>
-        </Field>
-        <Field Name="Feb2Format">
-          <DataField>Feb2Format</DataField>
-        </Field>
-        <Field Name="Mar2">
-          <DataField>Mar2</DataField>
-        </Field>
-        <Field Name="Mar2Format">
-          <DataField>Mar2Format</DataField>
-        </Field>
-        <Field Name="Apr2">
-          <DataField>Apr2</DataField>
-        </Field>
-        <Field Name="Apr2Format">
-          <DataField>Apr2Format</DataField>
-        </Field>
-        <Field Name="May2">
-          <DataField>May2</DataField>
-        </Field>
-        <Field Name="May2Format">
-          <DataField>May2Format</DataField>
-        </Field>
-        <Field Name="Jun2">
-          <DataField>Jun2</DataField>
-        </Field>
-        <Field Name="Jun2Format">
-          <DataField>Jun2Format</DataField>
-        </Field>
-        <Field Name="Jul2">
-          <DataField>Jul2</DataField>
-        </Field>
-        <Field Name="Jul2Format">
-          <DataField>Jul2Format</DataField>
-        </Field>
-        <Field Name="Aug2">
-          <DataField>Aug2</DataField>
-        </Field>
-        <Field Name="Aug2Format">
-          <DataField>Aug2Format</DataField>
-        </Field>
-        <Field Name="Sep2">
-          <DataField>Sep2</DataField>
-        </Field>
-        <Field Name="Sep2Format">
-          <DataField>Sep2Format</DataField>
-        </Field>
-        <Field Name="Oct2">
-          <DataField>Oct2</DataField>
-        </Field>
-        <Field Name="Oct2Format">
-          <DataField>Oct2Format</DataField>
-        </Field>
-        <Field Name="Nov2">
-          <DataField>Nov2</DataField>
-        </Field>
-        <Field Name="Nov2Format">
-          <DataField>Nov2Format</DataField>
-        </Field>
-        <Field Name="Dec2">
-          <DataField>Dec2</DataField>
-        </Field>
-        <Field Name="Dec2Format">
-          <DataField>Dec2Format</DataField>
-        </Field>
-        <Field Name="RowTotal">
-          <DataField>RowTotal</DataField>
-        </Field>
-        <Field Name="RowTotalFormat">
-          <DataField>RowTotalFormat</DataField>
-        </Field>
-        <Field Name="RowTotal1">
-          <DataField>RowTotal1</DataField>
-        </Field>
-        <Field Name="RowTotal1Format">
-          <DataField>RowTotal1Format</DataField>
-        </Field>
-        <Field Name="RowTotal2">
-          <DataField>RowTotal2</DataField>
-        </Field>
-        <Field Name="RowTotal2Format">
-          <DataField>RowTotal2Format</DataField>
-        </Field>
-        <Field Name="ReportFilters">
-          <DataField>ReportFilters</DataField>
-        </Field>
-        <Field Name="ReportHeader1">
-          <DataField>ReportHeader1</DataField>
-        </Field>
-        <Field Name="ReportHeader2">
-          <DataField>ReportHeader2</DataField>
-        </Field>
-        <Field Name="ReportHeader3">
-          <DataField>ReportHeader3</DataField>
-        </Field>
-        <Field Name="ReportHeader4">
-          <DataField>ReportHeader4</DataField>
-        </Field>
-        <Field Name="ReportHeader5">
-          <DataField>ReportHeader5</DataField>
-        </Field>
-        <Field Name="ReportHeader6">
-          <DataField>ReportHeader6</DataField>
-        </Field>
-        <Field Name="ReportHeader7">
-          <DataField>ReportHeader7</DataField>
-        </Field>
-        <Field Name="ReportHeader8">
-          <DataField>ReportHeader8</DataField>
-        </Field>
-        <Field Name="ReportHeader9">
-          <DataField>ReportHeader9</DataField>
-        </Field>
-        <Field Name="ReportHeader10">
-          <DataField>ReportHeader10</DataField>
-        </Field>
-        <Field Name="ReportHeader11">
-          <DataField>ReportHeader11</DataField>
-        </Field>
-        <Field Name="ReportHeader12">
-          <DataField>ReportHeader12</DataField>
-        </Field>
-        <Field Name="ReportHeader13">
-          <DataField>ReportHeader13</DataField>
-        </Field>
-        <Field Name="ReportHeader14">
-          <DataField>ReportHeader14</DataField>
-        </Field>
-        <Field Name="ReportHeader15">
-          <DataField>ReportHeader15</DataField>
-        </Field>
-        <Field Name="ReportHeader16">
-          <DataField>ReportHeader16</DataField>
-        </Field>
-        <Field Name="ReportHeader17">
-          <DataField>ReportHeader17</DataField>
-        </Field>
-        <Field Name="ReportHeader18">
-          <DataField>ReportHeader18</DataField>
-        </Field>
-        <Field Name="ReportHeader19">
-          <DataField>ReportHeader19</DataField>
-        </Field>
-        <Field Name="ReportHeader20">
-          <DataField>ReportHeader20</DataField>
-        </Field>
-        <Field Name="ReportHeader21">
-          <DataField>ReportHeader21</DataField>
-        </Field>
-        <Field Name="ReportHeader22">
-          <DataField>ReportHeader22</DataField>
-        </Field>
-        <Field Name="ReportHeader23">
-          <DataField>ReportHeader23</DataField>
-        </Field>
-        <Field Name="ReportHeader24">
-          <DataField>ReportHeader24</DataField>
-        </Field>
-        <Field Name="ReportHeader25">
-          <DataField>ReportHeader25</DataField>
-        </Field>
-        <Field Name="ReportHeader26">
-          <DataField>ReportHeader26</DataField>
-        </Field>
-        <Field Name="ReportHeader27">
-          <DataField>ReportHeader27</DataField>
-        </Field>
-        <Field Name="ReportHeader28">
-          <DataField>ReportHeader28</DataField>
-        </Field>
-        <Field Name="ReportHeader29">
-          <DataField>ReportHeader29</DataField>
-        </Field>
-        <Field Name="ReportHeader30">
-          <DataField>ReportHeader30</DataField>
-        </Field>
-        <Field Name="ReportHeader31">
-          <DataField>ReportHeader31</DataField>
-        </Field>
-        <Field Name="ReportHeader32">
-          <DataField>ReportHeader32</DataField>
-        </Field>
-        <Field Name="ReportHeader33">
-          <DataField>ReportHeader33</DataField>
-        </Field>
-        <Field Name="ReportHeader34">
-          <DataField>ReportHeader34</DataField>
-        </Field>
-        <Field Name="ReportHeader35">
-          <DataField>ReportHeader35</DataField>
-        </Field>
-        <Field Name="ReportHeader36">
-          <DataField>ReportHeader36</DataField>
-        </Field>
-        <Field Name="NoofMonth">
-          <DataField>NoofMonth</DataField>
-        </Field>
-        <Field Name="YearFirst">
-          <DataField>YearFirst</DataField>
-        </Field>
-        <Field Name="YearSecond">
-          <DataField>YearSecond</DataField>
-        </Field>
-        <Field Name="TotalAmtMonthWise">
-          <DataField>TotalAmtMonthWise</DataField>
-        </Field>
-        <Field Name="TotalAmtMonthWiseFormat">
-          <DataField>TotalAmtMonthWiseFormat</DataField>
-        </Field>
-      </Fields>
-      <Query>
-        <DataSourceName>DataSource</DataSourceName>
-        <CommandText />
-      </Query>
-    </DataSet>
-  </DataSets>
 </Report>

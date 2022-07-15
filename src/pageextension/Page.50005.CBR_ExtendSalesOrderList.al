@@ -36,7 +36,7 @@ pageextension 50041 CBRExtSalesOrderList extends "Sales Order List"
                 Promoted = true;
                 PromotedCategory = Report;
                 PromotedIsBig = true;
-                RunObject = Report "Customer Wise Sales Report";
+                RunObject = Report "Master Sales";
             }
         }
 

@@ -2,7 +2,23 @@ pageextension 50001 CBR_ExtendItemList extends "Item List"
 {
     layout
     {
-        // Add changes to page layout here
+        addafter(InventoryField)
+        {
+
+            field("Qty. on Asm. Component"; Rec."Qty. on Asm. Component")
+            {
+                ApplicationArea = All;
+            }
+            field("Qty. on Purch. Order"; Rec."Qty. on Purch. Order")
+            {
+                ApplicationArea = All;
+            }
+            field("Qty. on Sales Order"; Rec."Qty. on Sales Order")
+            {
+                ApplicationArea = All;
+            }
+
+        }
     }
 
     actions

@@ -1,4 +1,5 @@
-report 50004 "Customer Wise Sales Report"
+//"Customer Wise Sales Report"
+report 50004 "Master Sales"
 {
     DefaultLayout = RDLC;
     RDLCLayout = './MasterSales.rdl';
@@ -121,49 +122,49 @@ report 50004 "Customer Wise Sales Report"
             column(Dec1; AmtMonthWise[24])
             {
             }
-            column(Jan2; AmtMonthWise[25])
-            {
-            }
-            column(Feb2; AmtMonthWise[26])
-            {
-            }
-            column(Mar2; AmtMonthWise[27])
-            {
-            }
-            column(Apr2; AmtMonthWise[28])
-            {
-            }
-            column(May2; AmtMonthWise[29])
-            {
-            }
-            column(Jun2; AmtMonthWise[30])
-            {
-            }
-            column(Jul2; AmtMonthWise[31])
-            {
-            }
-            column(Aug2; AmtMonthWise[32])
-            {
-            }
-            column(Sep2; AmtMonthWise[33])
-            {
-            }
-            column(Oct2; AmtMonthWise[34])
-            {
-            }
-            column(Nov2; AmtMonthWise[35])
-            {
-            }
-            column(Dec2; AmtMonthWise[36])
-            {
-            }
+            // column(Jan2; AmtMonthWise[25])
+            // {
+            // }
+            // column(Feb2; AmtMonthWise[26])
+            // {
+            // }
+            // column(Mar2; AmtMonthWise[27])
+            // {
+            // }
+            // column(Apr2; AmtMonthWise[28])
+            // {
+            // }
+            // column(May2; AmtMonthWise[29])
+            // {
+            // }
+            // column(Jun2; AmtMonthWise[30])
+            // {
+            // }
+            // column(Jul2; AmtMonthWise[31])
+            // {
+            // }
+            // column(Aug2; AmtMonthWise[32])
+            // {
+            // }
+            // column(Sep2; AmtMonthWise[33])
+            // {
+            // }
+            // column(Oct2; AmtMonthWise[34])
+            // {
+            // }
+            // column(Nov2; AmtMonthWise[35])
+            // {
+            // }
+            // column(Dec2; AmtMonthWise[36])
+            // {
+            // }
             column(RowTotal; AmtMonthWise[37])
             {
             }
             column(RowTotal1; AmtMonthWise[38])
             {
             }
-            column(RowTotal2; AmtMonthWise[39])
+            column(RowTotal2; TotalAmtMonthWise_G[1])
             {
             }
             column(ReportFilters; ReportFilters)
@@ -309,18 +310,20 @@ report 50004 "Customer Wise Sales Report"
                         AmtMonthWise[I] += SalesData.Amount;
                         IF I <= 12 THEN
                             AmtMonthWise[37] += SalesData.Amount;
+                        //TotalAmtMonthWise_G[1] += "Sales Data".Amount;
                         IF (I > 12) AND (I <= 24) THEN
                             AmtMonthWise[38] += SalesData.Amount;
 
                     END;
                     TotalAmtMonthWise := AmtMonthWise[37] + AmtMonthWise[38];
-
                     Customer.GET("Sales Data"."Sell-to Customer No.");
+                    //TotalAmtMonthWise_G[1] := AmtMonthWise[37];
                 END;
             end;
 
             trigger OnPostDataItem()
             begin
+
             end;
 
             trigger OnPreDataItem()
@@ -421,6 +424,7 @@ report 50004 "Customer Wise Sales Report"
         StDateFilter: Date;
         EnDateFilter: Date;
         AmtMonthWise: array[40] of Decimal;
+        TotalAmtMonthWise_G: array[2] of Decimal;
         CreMemoAmtMonthWise: array[60] of Decimal;
         xNo: Code[20];
         xcustomerNo: Code[20];
