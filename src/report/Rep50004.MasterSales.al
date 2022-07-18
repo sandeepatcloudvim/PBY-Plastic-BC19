@@ -122,9 +122,9 @@ report 50004 "Master Sales"
             column(Dec1; AmtMonthWise[24])
             {
             }
-            // column(Jan2; AmtMonthWise[25])
-            // {
-            // }
+            column(AmtMonthWise_25; AmtMonthWise[25])
+            {
+            }
             // column(Feb2; AmtMonthWise[26])
             // {
             // }
@@ -315,6 +315,13 @@ report 50004 "Master Sales"
                             AmtMonthWise[38] += SalesData.Amount;
 
                     END;
+                    //For I := 25 to 25 Do begin
+                    "Sales Data".Reset();
+                    SalesData.SETRANGE("Sell-to Customer No.", "Sales Data"."Sell-to Customer No.");
+                    SalesData.SETFILTER("Posting Date", '%1..%2', FirstDateYear, StartMonthDate);
+                    SalesData.CALCSUMS(Amount);
+                    AmtMonthWise[25] += SalesData.Amount;
+                    //end;
                     TotalAmtMonthWise := AmtMonthWise[37] + AmtMonthWise[38];
                     Customer.GET("Sales Data"."Sell-to Customer No.");
                     //TotalAmtMonthWise_G[1] := AmtMonthWise[37];
@@ -382,7 +389,7 @@ report 50004 "Master Sales"
             IF GUIALLOWED THEN
                 ERROR('Start Date should not be blank');
         FirstDateYear := CALCDATE('-CY', CALCDATE('-1Y', LastDateYear));//AGT_DS-Always start from january month
-
+        StartMonthDate := CalcDate('-1Y', LastDateYear);
         LastDateYear := CALCDATE('CM', LastDateYear);
         StartMonth := DATE2DMY(FirstDateYear, 2);
         NoofMonth := 1 + DATE2DMY(LastDateYear, 2) - DATE2DMY(FirstDateYear, 2) + 12 * (DATE2DMY(LastDateYear, 3) - DATE2DMY(FirstDateYear, 3));
@@ -441,6 +448,7 @@ report 50004 "Master Sales"
         RegionalManger: Code[20];
         FirstDateYear: Date;
         LastDateYear: Date;
+        StartMonthDate: Date;
         SalesData: Record 50000 temporary;
         Category: Code[20];
         EntryNo: Integer;
